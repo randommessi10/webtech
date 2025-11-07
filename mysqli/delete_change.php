@@ -3,8 +3,8 @@ session_start();
 $username = $_SESSION['username'];
 $conn = mysqli_connect("localhost", "root", "", "test");
 
-$action = $_GET['action'] ?? null;
-$newpass = $_GET['t1'] ?? null;
+$action = $_GET['action'] ;
+$newpass = $_GET['t1'] ;
 
 if ($action == 'change' && $newpass) {
     $query = "UPDATE users SET password = '$newpass' WHERE username = '$username'";
